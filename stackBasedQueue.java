@@ -2,27 +2,27 @@ import java.util.Stack;
 public class stackBasedQueue{
     Stack<Integer> stack1;
     Stack<Integer> stack2;
-    public void stackBasedQueue() {
+    public void stackBasedQueue() {//Austin
     // Enter code Here
     // This is a stack initialization Stack<Integer> s = new Stack<Integer>();
     }
-    public boolean isEmpty() {
+    public boolean isEmpty() {//Austin
     // Enter code Here
     return true;
     }
-    public void enqueue(int newItem){
+    public void enqueue(int newItem){//Matthew
     // Enter code Here
     }
-    public int dequeue() throws QueueException{
+    public int dequeue() throws QueueException{//Matthew
     // In case of problem:
     // throw new QueueException("You can not DEQUEUE on an EMPTY queue :(( ");
     // Enter code Here
     return 0;
     }
-    public void dequeueAll(){
+    public void dequeueAll(){//Adam
     //Enter code Here
     }
-    public int peek() throws QueueException{
+    public int peek() throws QueueException{//Adam
     // In case of problem:
     // throw new QueueException("You can not PEEK on an EMPTY queue :(( ");
     // Enter code Here

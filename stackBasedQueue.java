@@ -11,14 +11,25 @@ public class stackBasedQueue{
     return true;
     }
     public void enqueue(int newItem){//Matthew
-    // Enter code Here
+        stack1.push(newItem);
     }
     public int dequeue() throws QueueException{//Matthew
+
     // In case of problem:
     // throw new QueueException("You can not DEQUEUE on an EMPTY queue :(( ");
     // Enter code Here
-    return 0;
+        if(stack2.isEmpty()){
+            if(stack1.isEmpty()){
+                throw new QueueException("You can not DEQUEUE on an EMPTY queue :(( ");
+            }
+            while(!stack1.isEmpty()){
+                stack2.push(stack1.pop());
+            
+            }
+        }
+        return stack2.pop();
     }
+
     public void dequeueAll(){//Adam
     //Enter code Here
     }

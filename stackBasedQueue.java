@@ -1,14 +1,14 @@
 import java.util.Stack;
 public class stackBasedQueue{
-    Stack<Integer> stack1;
-    Stack<Integer> stack2;
-    public void stackBasedQueue() {//Austin
-    // Enter code Here
-    // This is a stack initialization Stack<Integer> s = new Stack<Integer>();
+    Stack<Integer> inputStack; 
+    Stack<Integer> outputStack;
+
+    public stackBasedQueue() {//Austin
+		inputStack = new Stack<Integer>();
+		outputStack = new Stack<Integer>();
     }
     public boolean isEmpty() {//Austin
-    // Enter code Here
-    return true;
+		return this.inputStack.isEmpty() && this.outputStack.isEmpty();
     }
     public void enqueue(int newItem){//Matthew
     // Enter code Here

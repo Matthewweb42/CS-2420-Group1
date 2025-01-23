@@ -11,22 +11,40 @@ public class stackBasedQueue{
 		return this.inputStack.isEmpty() && this.outputStack.isEmpty();
     }
     public void enqueue(int newItem){//Matthew
-    // Enter code Here
+        stack1.push(newItem);
     }
     public int dequeue() throws QueueException{//Matthew
+
     // In case of problem:
     // throw new QueueException("You can not DEQUEUE on an EMPTY queue :(( ");
     // Enter code Here
-    return 0;
+        if(stack2.isEmpty()){
+            if(stack1.isEmpty()){
+                throw new QueueException("You can not DEQUEUE on an EMPTY queue :(( ");
+            }
+            while(!stack1.isEmpty()){
+                stack2.push(stack1.pop());
+            
+            }
+        }
+        return stack2.pop();
     }
+
     public void dequeueAll(){//Adam
-    //Enter code Here
+        //Enter code Here
+        while(!stack2.isEmpty()){
+            dequeue();
+        }
     }
     public int peek() throws QueueException{//Adam
-    // In case of problem:
-    // throw new QueueException("You can not PEEK on an EMPTY queue :(( ");
-    // Enter code Here
-    return 1;
+        // In case of problem:
+        // throw new QueueException("You can not PEEK on an EMPTY queue :(( ");
+        // Enter code Here
+        try{
+            return stack2.peek();
+        } catch (Exception e) {
+            throw new QueueException("You can not PEEK on an EMPTY queue :(( ");
+        }
     }
     // Tester code
     public static void main(String[] args){
